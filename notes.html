@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="website icon" type="png" href="img/doodle-note-glitch.png">
+  <link rel="stylesheet" href="styles/notes.css">
+  <title>Memory</title>
+</head>
+<body>
+
+  <div class="note-history">
+    <!-- CONTROLS SECTION -->
+    <div class="controls">
+      <div class="add-note ">
+        <button class="create-note active" onclick="openNote()">New Note 
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" ><path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="rgba(255,255,255,1)"></path></svg>
+        </button>
+      </div>
+      <div class="clear-history active">
+        <button onclick="
+          clearNoteHistory();
+          ">Clear History</button>
+      </div>
+    </div>
+    <!-- NOTE HISTORY SECTION -->
+    <div class="contain-note-tags">
+      <div class="premonition">Recent notes appear here...</div>
+      <!--<div class="note-tag">
+        <div class="title-div">
+          <p class="note-tag-title">A Sample Note</p>
+  
+          !-- NOTE-TAG_ICONS  --
+          !-- DELETE --
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="23" height="23" class="icon"><path d="M7 4V2H17V4H22V6H20V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V6H2V4H7ZM6 6V20H18V6H6ZM9 9H11V17H9V9ZM13 9H15V17H13V9Z"></path></svg>
+
+        !-- MORE --
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="23" height="23" class="icon"><path d="M12 3C10.9 3 10 3.9 10 5C10 6.1 10.9 7 12 7C13.1 7 14 6.1 14 5C14 3.9 13.1 3 12 3ZM12 17C10.9 17 10 17.9 10 19C10 20.1 10.9 21 12 21C13.1 21 14 20.1 14 19C14 17.9 13.1 17 12 17ZM12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10Z"></path></svg>     
+        </div>
+
+        <div class="note-tag-body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, provident ut consectetur laudantium eos atque 
+        </div>
+  
+        <span class="time-stamp js-time-stamp">Tue, 5th Sept 2023 at 10:14pm</span>
+      </div>-->
+    </div>
+
+  </div>
+  <div class="note-body">
+    <!-- TITLE SECTION -->
+    <div class="note-title">
+      <!-- title input -->
+      <div>
+        <input placeholder="Note Title..." spellcheck="false" class="js-note-title"/>
+      </div>
+      <!-- title-button -->
+      <div>
+        <button class="active save-btn" onclick="getNote()">Save
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z" fill="rgba(255,255,255,1)"></path></svg>
+        </button>
+        <button class="menu-btn" onclick="closeNoteHistory()">Menu</button>
+      </div>
+    </div>
+
+    <!-- BODY SECTION -->
+    <div class="note-body-section">
+      <textarea spellcheck="false" placeholder="Start Typing..." class="js-note-body"></textarea>
+    </div>
+  </div>
+  <script src="scripts/note.js"></script>
+</body>
+</html>
